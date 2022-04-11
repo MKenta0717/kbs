@@ -4,15 +4,17 @@ $(window).scroll(function() {
   footHeight = $(".small").innerHeight(); 
   if ( scrollHeight - scrollPosition  <= footHeight ) { 
     $(".fixed").css({
-      "position":"static"
-      
+      "position":"absolute",
+      "bottom":"0px",
+      "background":"gray"
     });
     
     console.log(scrollPosition);
   } else { 
     $(".fixed").css({
         "position":"fixed", 
-        "bottom": "0px" 
+        "bottom": "0px",
+       "background": "rgba(255, 255, 255, 0.8)"
     });
   }
 }

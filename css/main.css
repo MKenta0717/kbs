@@ -462,6 +462,7 @@ footer .company_footer li+li {
 
 footer .estimate {
  height: 80px;
+ position: relative;
   
 }
 /* お見積もり */
@@ -479,6 +480,7 @@ footer .estimate a {
   font-weight: 400;
   letter-spacing: 0em;
   background: rgba(255, 255, 255, 0.8);
+  
   
 }
 
