@@ -1,17 +1,14 @@
-
-window.addEventListener("scroll", function () {
-  let fixed_top = document.querySelector('.fixed').getBoundingClientRect().top;
-  let fixed_bottom = document.querySelector('.fixed').getBoundingClientRect().bottom;
-
-  let estimate_top = document.querySelector('.estimate').getBoundingClientRect().top;
-  let estimate_bottom = document.querySelector('.estimate').getBoundingClientRect().bottom;
-  let window_height = this.window.pageYOffset;
-
-
-  if(fixed_bottom + 100 > window.outerHeight){
-    this.document.querySelector('.fixed').classList.remove('not_active');
-  }else if(estimate_top + window_height <= fixed_top + window_height){
-    this.document.querySelector('.fixed').classList.add('not_active');
-  }
-
+$(window).on("scroll", function() {
+ estimate_top = $('.estimate').offset().top;
+ estimate_height = $('.estimate').outerHeight();
+ customer_bottom = $('.company_footer').outerHeight() + $('.company_footer').offset().top;
+ 
+ console.log(customer_bottom)
+ 
+ console.log($(this).scrollTop()+$(this).outerHeight())
+ if($(this).scrollTop()+$(this).outerHeight() - estimate_height >= customer_bottom){
+   $('.estimate').addClass('not_active');
+ }else if($('.estimate').hasClass('not_active')){
+  $('.estimate').removeClass('not_active');
+ }
 });

@@ -167,6 +167,16 @@ a {
   background: #ffffff;
 }
 
+.header .header_nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 600px;
+}
+
+/* ヒーロー */
+
 .hero {
   width: 100%;
   height: 466px;
@@ -353,14 +363,17 @@ a {
   background: url(../img/remodeling/painting.png) no-repeat center center;
   background-size: cover;
 }
+
 .remodeling_box .explanation .closs::before {
   background: url(../img/remodeling/closs.png) no-repeat center center;
   background-size: cover;
 }
+
 .remodeling_box .explanation .roof::before {
   background: url(../img/remodeling/roof.png) no-repeat center center;
   background-size: cover;
 }
+
 .remodeling_box .explanation .balcony::before {
   background: url(../img/remodeling/balcony.png) no-repeat center center;
   background-size: cover;
@@ -447,6 +460,7 @@ footer .company_footer {
   line-height: 17px;
   letter-spacing: 0em;
   padding: 20px 0 40px;
+  box-sizing: border-box;
 }
 
 footer .company_footer img {
@@ -461,14 +475,15 @@ footer .company_footer li+li {
 
 
 footer .estimate {
- height: 80px;
- position: relative;
-  
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
 }
+
 /* お見積もり */
 footer .estimate a {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   height: 80px;
   display: flex;
@@ -480,12 +495,13 @@ footer .estimate a {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0em;
-  background: rgba(255, 255, 255, 0.8); 
- 
+  /* background: rgba(255, 255, 255, 0.8); */
+background: gray;
 }
 
-footer .estimate .fixed.not_active{
+footer .estimate.not_active {
   position: absolute;
+  bottom: auto;
 }
 
 footer .estimate a::before {
@@ -500,6 +516,7 @@ footer .estimate a::before {
 }
 
 footer small {
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,10 +528,10 @@ footer small {
 
 footer small p {
   font-family: Montserrat;
-font-size: 12px;
-font-weight: 400;
-line-height: 15px;
-letter-spacing: 0em;
-text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
 
 }
