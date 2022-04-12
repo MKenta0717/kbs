@@ -1,21 +1,23 @@
-$(window).scroll(function() {
-  scrollHeight = $(document).height();
-  scrollPosition = $(window).height() + $(window).scrollTop(); 
-  footHeight = $(".small").innerHeight(); 
-  if ( scrollHeight - scrollPosition  <= footHeight ) { 
+$(window).scroll(function () {
+  estimate_bottom = $(".estimate").height() + $(".estimate").offset().top;
+	scroll_bottom = $(window).scrollTop() + $(window).height();
+  
+
+
+  if (scroll_bottom <= estimate_bottom) {
     $(".fixed").css({
-      "position":"absolute",
-      "bottom":"0px",
-      "background":"gray"
+      
+      position: "fixed",
+      bottom: "0px",
+      background: "rgba(255, 255, 255, 0.8)",
+
     });
-    
-    console.log(scrollPosition);
-  } else { 
+  } else {
     $(".fixed").css({
-        "position":"fixed", 
-        "bottom": "0px",
-       "background": "rgba(255, 255, 255, 0.8)"
+      position: "absolute",
+      bottom: "0px",
+      background: "gray",
+      
     });
   }
-}
-);
+});
