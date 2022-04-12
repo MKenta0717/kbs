@@ -1,38 +1,51 @@
-// $(window).scroll(function () {
-//   estimate_bottom = $(".estimate").height() + $(".estimate").offset().top;
-// 	scroll_bottom = $(window).scrollTop() + $(window).height();
-  
-
-
-//   if (scroll_bottom <= estimate_bottom) {
+// $(window).scroll(function() {
+//   scrollHeight = $(document).height();
+//   scrollPosition = $(window).height() + $(window).scrollTop();
+//   footHeight = $(".small").innerHeight();
+//   if ( scrollHeight - scrollPosition  <= footHeight ) {
 //     $(".fixed").css({
-      
-//       position: "fixed",
-//       bottom: "0px",
-//       background: "rgba(255, 255, 255, 0.8)",
-
+//       "position":"absolute",
+//       "bottom":"0px",
+//       "background":"gray"
 //     });
+
+//     console.log(scrollPosition);
 //   } else {
 //     $(".fixed").css({
-//       position: "absolute",
-//       bottom: "0px",
-//       background: "gray",
-      
+//         "position":"fixed",
+//         "bottom": "0px",
+//        "background": "rgba(255, 255, 255, 0.8)"
 //     });
 //   }
-// });
-const estimate = document.querySelector('.estimate');
-const estimate_bottom = estimate.getBoundingClientRect().bottom;
-const fixed = document.querySelector('.fixed');
+// }
+// );
 
-window.addEventListener('scroll',function(){
+$(window).scroll(function () {
+  estimate_top = $(".estimate").offset().top;
+  estimate_bottom = $(".estimate").height() + estimate_top;
+  fixed_top = $(".fixed").offset().top;
+  scroll_top    = $(window).scrollTop();
+	scroll_bottom = scroll_top + $(window).height();
+  target_height = $(document).height() - $('.small').height();
+  position = $(window).scrollTop()+$(window).height();
   
-  console.log(window.pageYOffset+window.outerHeight);
-  //console.log(this.document.documentElement.scrollHeight - 28)
-  if(window.pageYOffset+window.outerHeight >= document.documentElement.scrollHeight-28){
-    fixed.classList.add('not_active')
-   
-  }else{
-    fixed.classList.remove('not_active');
+
+  console.log(target_height);
+  console.log(position);
+  
+  
+
+  if (position<=target_height) {
+    $(".fixed").css({
+      position: "fixed",
+      bottom: "0px",
+      background: "rgba(255, 255, 255, 0.8)",
+    });
+  } else if (fixed_top >= estimate_top) {
+    $(".fixed").css({
+      position: "absolute",
+      bottom: "0px",
+      background: "gray",
+    });
   }
 });
