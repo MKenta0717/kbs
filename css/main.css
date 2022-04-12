@@ -480,8 +480,8 @@ footer .estimate a {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0em;
-  /* background: rgba(255, 255, 255, 0.8);  */
-  background: pink;
+  background: rgba(255, 255, 255, 0.8); 
+ 
 }
 
 footer .estimate .fixed.not_active{

@@ -1,51 +1,17 @@
-// $(window).scroll(function() {
-//   scrollHeight = $(document).height();
-//   scrollPosition = $(window).height() + $(window).scrollTop();
-//   footHeight = $(".small").innerHeight();
-//   if ( scrollHeight - scrollPosition  <= footHeight ) {
-//     $(".fixed").css({
-//       "position":"absolute",
-//       "bottom":"0px",
-//       "background":"gray"
-//     });
 
-//     console.log(scrollPosition);
-//   } else {
-//     $(".fixed").css({
-//         "position":"fixed",
-//         "bottom": "0px",
-//        "background": "rgba(255, 255, 255, 0.8)"
-//     });
-//   }
-// }
-// );
+window.addEventListener("scroll", function () {
+  let fixed_top = document.querySelector('.fixed').getBoundingClientRect().top;
+  let fixed_bottom = document.querySelector('.fixed').getBoundingClientRect().bottom;
 
-$(window).scroll(function () {
-  estimate_top = $(".estimate").offset().top;
-  estimate_bottom = $(".estimate").height() + estimate_top;
-  fixed_top = $(".fixed").offset().top;
-  scroll_top    = $(window).scrollTop();
-	scroll_bottom = scroll_top + $(window).height();
-  target_height = $(document).height() - $('.small').height();
-  position = $(window).scrollTop()+$(window).height();
-  
+  let estimate_top = document.querySelector('.estimate').getBoundingClientRect().top;
+  let estimate_bottom = document.querySelector('.estimate').getBoundingClientRect().bottom;
+  let window_height = this.window.pageYOffset;
 
-  console.log(target_height);
-  console.log(position);
-  
-  
 
-  if (position<=target_height) {
-    $(".fixed").css({
-      position: "fixed",
-      bottom: "0px",
-      background: "rgba(255, 255, 255, 0.8)",
-    });
-  } else if (fixed_top >= estimate_top) {
-    $(".fixed").css({
-      position: "absolute",
-      bottom: "0px",
-      background: "gray",
-    });
+  if(fixed_bottom + 100 > window.outerHeight){
+    this.document.querySelector('.fixed').classList.remove('not_active');
+  }else if(estimate_top + window_height <= fixed_top + window_height){
+    this.document.querySelector('.fixed').classList.add('not_active');
   }
+
 });
