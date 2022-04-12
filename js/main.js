@@ -16,7 +16,7 @@ $(window).scroll(function () {
     $(".fixed").css({
       position: "absolute",
       bottom: "0px",
-      background: "gray",
+      background: "pink",
       
     });
   }
