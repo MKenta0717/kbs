@@ -1,0 +1,64 @@
+.hero {
+  width: 100%;
+  height: 170px;
+  background: url(../img/hero/company_hero_mobile.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+
+.hero h1 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 10px;
+
+}
+
+/* ---------  職人紹介 --------- */
+
+.craftsman_intro{
+  padding-bottom: 50px;
+}
+
+/* 職人写真 */
+.craftsman .pic img {
+  width: 100%;
+}
+/* 職人名前 */
+.craftsman .name {
+  margin: 50px auto 0;
+  padding: 0 30px;
+}
+
+.craftsman .name h2 {
+  width: 90%;
+  position: relative;
+  font-family: Noto Serif JP;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-bottom: solid 2px #C4C4C4;
+  padding: 0 0 6px 0;
+  margin-bottom: 6px;
+}
+/* 職人名前下のボーダー */
+.craftsman .name h2::after{
+  content: "";
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+  width: 72px;
+  height: 2px;
+  background: #1793D9;
+}
+/* 職人紹介文 */
+.craftsman .text {
+  margin: 30px auto 0;
+  padding: 0 30px;
+}
