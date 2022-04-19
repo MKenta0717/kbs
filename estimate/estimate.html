@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Rhodium+Libre&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="../css/font.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/estimate.css" />
+  <title>お見積もり―株式会社KBS</title>
+</head>
+<body>
+
+   <!-- ヘッダー -->
+   <header class="header">
+    <div class="logo_area">
+      <h1>
+        <a href="/">
+          <img src="../img/logo/logo.png" alt="ロゴ" class="logo" />
+        </a>
+      </h1>
+    </div>
+    <div class="hub_menu">
+      <div class="icon-border line1"></div>
+      <div class="icon-border line2"></div>
+      <div class="icon-border line3"></div>
+    </div>
+    <!-- ハンバーガーメニュー -->
+    <nav class="header_nav">
+      <div class="close"></div>
+      <ul class="menu">
+        <li><a href="/">ホーム</a></li>
+        <li><a href="../company/company.html">会社紹介</a></li>
+        <li><a href="../craftsman/craftsman.html">職人紹介</a></li>
+        <li><a href="#">施工の流れ</a></li>
+        <li><a href="../construction/case.html">施工事例</a></li>
+        <li><a href="../estimate/estimate.html">お見積もり</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- トップ画像 -->
+  <section class="hero_sub">
+    <h1>お見積もり</h1>
+  </section>
+  <section class="estimate_form">
+    <div class="container">
+
+      <form action="" method="post">
+        <div class="form_group require">
+          <label for="name">氏名</label>
+          <input type="text" id="name" name="name" placeholder="例）山田　太郎">
+        </div>
+        <div class="form_group require">
+          <label for="name_kana">フリガナ</label>
+          <input type="text" id="name_kana" name="name_kana" placeholder="例）ヤマダ　タロウ">
+        </div>
+        <div class="form_group require">
+          <label for="phone_number">電話番号</label>
+          <input type="text" id="phone_number" name="phone_number" placeholder="例）000-000-0000">
+        </div>
+        <div class="form_group">
+          <label for="email">メールアドレス</label>
+          <input type="text" id="email" name="email" placeholder="例）kbs@gmail.com">
+        </div>
+        <div class="form_group require">
+          <label for="message">ご用件</label>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="例）お問い合わせ内容をお書きください。"></textarea>
+        </div>
+        <div>
+         <button type="submit">送信</button>
+        </div>
+      </form>
+    </div>
+
+
+
+  </section>
+
+
+  <footer>
+    <div class="company_footer">
+      <div class="logo"><img src="../img/logo/logo.png" alt="" /></div>
+      <ul>
+        <li>東京都稲城市平尾2-75-4</li>
+        <li>TEL　042-350-1303</li>
+      </ul>
+    </div>
+    <div class="estimate"><a href="" class="fixed">お見積もり</a></div>
+    <small class="small">
+      <p>Copyright© 2022- 株式会社KBS All Rights Reserved.</p>
+    </small>
+  </footer>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="../js/main.js"></script>
+  
+</body>
+</html>
