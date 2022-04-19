@@ -29,9 +29,8 @@
 
 .company_info .content dt {
   width: 30%;
-  height: 80px;
   background: #0F586F;
-  padding-left: 14px;
+  padding:20px 0 20px 14px;
   color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -45,10 +44,9 @@
 
 .company_info .content dd {
   width: 70%;
-  height: 80px;
   display: flex;
   align-items: center;
-  padding-left: 14px;
+  padding:20px 0 20px 14px;
   font-size: 16px;
   font-weight: 200;
   line-height: 23px;

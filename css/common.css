@@ -30,6 +30,11 @@ body {
   width: 314px;
   height: 55px;
   box-sizing: border-box;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 23px;
+
+
 }
 
 .readmore a::after {
@@ -125,4 +130,3 @@ body {
 .feature img {
   width: 100%;
 }
-
